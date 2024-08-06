@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Dong Chen (陈 东)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+		<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a>Projects</a></li>
+              <li><a href="publications.html">Publications</a></li> 
+              <li><a href="fun.html">Fun</a></li>
+			  <li><a href="../files/cv_dchen.pdf">CV</a></li> 
+		</ul>
+	  </div>
+	</nav>
+	
+
+  
+  <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            
+			<!-- Projects -->
+            <div class="col-md-8" style="height: 100vh; overflow: auto;">
+                <h2 id="projects">Projects</h2>
+				
+				<!-- <dd><a href="./staticLocalityAnalysis.html"><strong>Static Locality Analysis</strong></a></dd><br/> -->
+				
+				<strong>1. Program Synthesis for Locality Analysis </strong> <a href="./publicatiions.html#DRAFT">[DRAFT]</a>
+                <ul>
+				Program synthesis moves programming to a higher level by coding intuitions instead of algorithm details.
+				It also can be seen as extanding compiling with searching, which changes the way we design program optimization passes in compiler.
+				This project is trying to synthesis for static locality analysis. <a href="https://github.com/dongchen-coder/symRIByInputOuputExamples">Source Code</a>
+				</ul>
+
+				<strong>2. Compiler Assigned Reference Leasing</strong> <a href="./publications.html#LCPC19">[LCPC'19]</a> <a href="./publications.html#MEMSYS19">[MEMSYS'19]</a> <a href="./publications.html#MEMSYS20">[MEMSYS'20]</a> <a href="./publications.html#ISMM21">[ISMM'21]</a> <a href="./publications.html#TACO21">[TACO'21]</a> <br/>
+                
+                <ul>
+				Conventional compilers usually optimize cache performance by reducing the memory footprint, as it has limited or no control of the data replacements in cache.
+				This project is trying to enable the fine-grained replacement control by program or compiler with lease cache.
+				A hardware prototype of lease cache and a compiler pass to assign leases for references are designed. <a href="https://github.com/dongchen-coder/CLAM">Source code</a>
+				</ul>
+                
+
+				<strong>3. Static Sampling for Locality Analysis</strong> <a href="./publications.html#PLDI18">[PLDI'18]</a> <a href="./publications.html#PPOPP20">[PPoPP'20-poster]</a> <br/>
+                <details>
+                <summary>Description</summary>
+                <ul>
+				This project builds a compiler tool that predicts the cache performance of compiler-time enumerable loop nests statically.
+				The tool constructs a specialized version of the loops to sampling reuse intervals and it is implemented as a LLVM analysis pass.
+				This technique can also be applied to parallelized loops, such as CUDA kernels and OpenMP. <a href="https://github.com/dongchen-coder/symFP">Source Code</a>
+				</ul>
+                </details>
+
+				<strong>4. Write Locality</strong> <a href="./publications.html#MEMSYS16">[MEMSYS'16]</a><br/>
+                <details>
+                <summary>Description</summary>
+                <ul>
+				This project proposes a locality model for writebacks. As persistent memory has limited write endurance, quantify writebacks from the cache can guide the optimizations for writes.
+				It provides a linear-time algorithm to analyze writebacks for all all cache sizes and a dynamic programming algorithm to minimize the writebacks for co-run program based on sole-run profiling.
+				<a href="https://github.com/dongchen-coder/tunableOCLbenchmarks/blob/master/utilities/wb.h">Source Code</a>
+                </ul>
+                </details>
+
+				<strong>5. OpenCL Performance Portibility</strong> <a href="./publications.html#HPCC13">[HPCC'13]</a><a href="./publications.html#EUROPAR14">[Euro-Par'14]</a> <br/>
+                <details>
+                <summary>Description</summary>
+                <ul>
+				This project targets on different computing devices with different architectures (CPU, GPU, MIC), optimizations to improve performance of OpenCL programs are summarized. 
+				A performance concerned code transformation (from fine-grained program to coarse-grained program) is being studied.
+                </ul>
+                </details>
+
+				Project 1 for now is independent research.<br/>
+                Projects 2,3,4 started before PhD graduation, supervided by (Prof. Chen Ding in University of Rochester).<br/> 
+                Project 5 is master's work in NUDT and stopped before PhD.<br/>
+
+			</div> 
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+    
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+    
+</body>
+
+</html>
